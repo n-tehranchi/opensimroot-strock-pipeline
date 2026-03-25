@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Simulation file for SimRoot version 12. 
+
+	Author: Jouke Postma
+	Note: 
+	Inclusion of this file will look up the phosphorus concentrations at the root surface 
+	
+-->
+
+<SimulationModelIncludeFile>
+<!--PlantTemplate-->
+	<SimulaDirective path="/plantTemplate">
+	</SimulaDirective>	
+
+<!--ShootTemplate-->
+	<SimulaDirective path="/shootTemplate">
+	</SimulaDirective>
+
+<!--HypocotylTemplate-->
+	<SimulaDirective path="/hypocotylTemplate">
+		<SimulaDirective path="growthpoint">
+			<SimulaDirective path="phosphorus">
+			  <SimulaLink name="nutrientConcentrationAtTheRootSurface" linksName="/environment/soil/phosphorus/concentration" />
+			</SimulaDirective>
+		</SimulaDirective>
+	</SimulaDirective>
+
+<!--Sibling root template-->
+	<SimulaDirective path="/siblingRootTemplate">
+		<SimulaDirective path="growthpoint">
+			<SimulaDirective path="phosphorus">
+			  <SimulaLink name="nutrientConcentrationAtTheRootSurface" linksName="/environment/soil/phosphorus/concentration" />
+			</SimulaDirective>
+		</SimulaDirective>
+	</SimulaDirective>
+	
+
+<!--DataPointTemplate-->
+	<SimulaDirective path="/dataPointTemplate">
+			<SimulaDirective path="phosphorus">
+			  <SimulaLink name="nutrientConcentrationAtTheRootSurface" linksName="/environment/soil/phosphorus/concentration" />
+			</SimulaDirective>
+	</SimulaDirective>
+</SimulationModelIncludeFile>
+

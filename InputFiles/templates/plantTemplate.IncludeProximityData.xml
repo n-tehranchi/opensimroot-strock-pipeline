@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SimulationModelIncludeFile>
+	<SimulaDirective path="/dataPointTemplate">
+		<SimulaDerivative name="neighborCount" unit="#" function="proximity" >
+			<SimulaConstant name="searchRadius" unit="cm"> 5 </SimulaConstant>
+		</SimulaDerivative>
+		<SimulaDerivative name="nearestNeighbor" unit="cm" function="proximity" >
+			<SimulaConstant name="searchRadius" unit="cm"> 5 </SimulaConstant>
+		</SimulaDerivative>
+		<SimulaDerivative name="nearestNeighborRootOfOtherSpecies" unit="cm" function="proximity">
+			<SimulaConstant name="searchRadius" unit="cm"> 5 </SimulaConstant>
+		</SimulaDerivative>
+		<SimulaDerivative name="nearestNeighborRootOfOtherPlant" unit="cm" function="proximity">
+			<SimulaConstant name="searchRadius" unit="cm"> 5 </SimulaConstant>
+		</SimulaDerivative>
+		<SimulaDerivative name="nearestNeighborRootOfSelf" unit="cm" function="proximity">
+			<SimulaConstant name="searchRadius" unit="cm"> 5 </SimulaConstant>
+		</SimulaDerivative>
+	</SimulaDirective>
+
+</SimulationModelIncludeFile>

@@ -1,0 +1,12 @@
+#!/bin/bash
+ ./compartiveGraph.sh "grep rootRespiration" 'rootRespiration' 3
+ ./compartiveGraph.sh "grep rootLength" 'rootLength' 3
+ ./compartiveGraph.sh "grep shootBiomass" 'shootBiomass' 3
+ ./compartiveGraph.sh "grep plantNutrientUptake | grep phosphorus" 'Phosphorousuptake' 3
+
+
+ 
+ ./lastLines.sh
+ ./lastLines2.sh
+# ./generatePlots.sh 
+

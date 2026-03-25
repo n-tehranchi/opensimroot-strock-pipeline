@@ -1,0 +1,12 @@
+In this project, I altered secondary growth rate.
+
+Present= default settings that were present in input files that Johannes Postma gave me on 01/22/2015
+Reduced0.5 = default settings with a multiplier of 0.5 
+Absent = default settings with a multiplier of 0
+
+Phosphorous levels were altered to create 7 levels of P (1-30um/L). For each level, P was NOT stratfied by depth 
+
+4 reps were run in this simulation.
+
+VTU files will be produced at 40 days-> box will be present
+

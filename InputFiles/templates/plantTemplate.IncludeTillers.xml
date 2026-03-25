@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SimulationModelIncludeFile>
+	
+
+	<SimulaDirective path="/shootTemplate">
+<!-- 		<SimulaBase name="tillers" objectGenerator="tillerFormation"></SimulaBase>
+ -->		<SimulaDerivative name="tillers" unit="#" function="numberOfTillers" objectGenerator="tillerFormation" />
+		
+	</SimulaDirective>
+
+	<SimulaDirective path="/plantTemplate">
+<!-- 		<SimulaBase name="tillers" objectGenerator="tillerFormation"></SimulaBase>
+ -->
+ 		<SimulaDerivative name="numberOfnodalroots" unit="#" function="numberOfRoots"  />
+ 		<SimulaDerivative name="numberOfnodalrootsOfTillers" unit="#" function="numberOfRoots"  />
+		
+	</SimulaDirective>
+
+
+</SimulationModelIncludeFile>
+

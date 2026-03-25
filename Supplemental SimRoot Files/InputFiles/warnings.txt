@@ -1,0 +1,4 @@
+Simulation took (hours:minutes:seconds): 0:0:0
+THE MODEL PUT OUT WARNINGS:
+FATAL ERROR: readFileInclude: Failed to open plantParameters/bean-carioca-SimRoot4.xml which is referenced in runBean.xml	1x
+OpenSimRoot was built on Mar  9 2026 from git version 3c514e5211	1x

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Simulation file for SimRoot version 5. 
+
+	Author: Jouke Postma
+	Note: 
+	This file is an include file and contains the plantTemplate. You can control here 
+	what parameters are simulated for the plant. It has sections for the whole plant, 
+	the shoot, the hypocotyl and the roots and the datapoints (which are the nodes 
+	the root is made up from). 
+	This file contains the settings for aerenchyma formation in simroot. 
+
+-->
+
+<SimulationModelIncludeFile>
+	<!-- SimulaDirective path="/simulationControls">
+		<SimulaBase name="corticalSenescence">
+			<SimulaConstant name="remobilizeP" type="bool"> true </SimulaConstant>
+			<SimulaConstant name="reduceRespiration" type="bool"> true </SimulaConstant>
+		</SimulaBase>
+	</SimulaDirective-->
+
+<!--DataPointTemplate-->
+	<SimulaDirective path="/hypocotylTemplate">
+		<SimulaDirective path="growthpoint">
+			<SimulaLink name="rootCorticalSenescenceStage" unit="noUnit" />
+			<SimulaConstant name="rootDiameterSteel" unit="cm">0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentVolumeSteel" unit="cm">0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentVolumeCortex" unit="cm">0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentDryWeightSteel"  unit="g" > 0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentDryWeightCortex"  unit="g" > 0 </SimulaConstant>
+		</SimulaDirective>
+	</SimulaDirective>
+
+	<!--Sibling root template-->
+	<SimulaDirective path="/siblingRootTemplate">
+		<SimulaDirective path="growthpoint">
+			<SimulaLink name="rootCorticalSenescenceStage" unit="noUnit" />
+			<SimulaConstant name="rootDiameterSteel" unit="cm">0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentVolumeSteel" unit="cm">0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentVolumeCortex" unit="cm">0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentDryWeightSteel"  unit="g" > 0 </SimulaConstant>
+			<SimulaConstant name="rootSegmentDryWeightCortex"  unit="g" > 0 </SimulaConstant>
+		</SimulaDirective>
+	</SimulaDirective>
+
+	<SimulaDirective path="/dataPointTemplate">
+		<SimulaLink name="rootCorticalSenescenceStage" unit="noUnit" />
+		<SimulaDerivative name="rootDiameterSteel" unit="cm" function="steelDiameter" />
+		<SimulaDerivative name="rootSegmentVolumeSteel" unit="cm3" function="rootSegmentVolumeSteel" />
+		<SimulaDerivative name="rootSegmentVolumeCortex" unit="cm3" function="rootSegmentVolumeCortex" />
+		<SimulaDerivative name="rootSegmentDryWeightSteel" unit="g" function="rootSegmentDryWeight" />
+		<SimulaDerivative name="rootSegmentDryWeightCortex" unit="g" function="rootSegmentDryWeight" />
+		<SimulaVariable name="rootSegmentRespirationSteel" unit="g" function="rootSegmentRespirationRate" />
+		<SimulaVariable name="rootSegmentRespirationCortex" unit="g" function="rootSegmentRespirationRate" />
+		<!-- 
+		<SimulaDerivative name="rootCorticalVolume" unit="cm3" function="corticalVolume" />
+		<SimulaDerivative name="respirationReductionDueToCorticalSenescence" unit="100%" function="??" />
+		<SimulaDerivative name="reductionInNutrientrequirementsDueToCorticalSenescence" unit="100%" function="??" />
+		<SimulaDerivative name="radialConductivityDueToCorticalSenescence" unit="100%" function="??" />
+		-->
+	</SimulaDirective>
+
+</SimulationModelIncludeFile>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-*"?>
+
+<SimulationModelIncludeFile>
+				<SimulaTable name_colum1="depth" unit_colum1="cm" name_colum2="concentration" unit_colum2="uMol/ml">
+				<!--barber 1995 lists 13.6 uMol/l = 13.6e-3 uMol/ml-->
+				<!--severe stress-->
+				<!-- 1e-3 = 1.8 mol/hectare (0-60 cm) x 95 g/mol = 0.171 kg/ha -->
+				<!-- gradient gives 0.168 kg/ha PO4 -->
+				<!--	 1000 0
+					 0.00001    0
+					 0 1.e-3
+					 -1000 1.e-3 -->
+				1000 0 
+				0.0001 0
+				0 13.00e-3
+				-4 13.00e-3
+				-5 4.33e-3
+				-9 4.33e-3
+				-10 0.87e-3
+				-29 0.87e-3
+				-30 0.25e-3
+				-1000 0.24e-3	 
+				</SimulaTable>
+</SimulationModelIncludeFile>
+

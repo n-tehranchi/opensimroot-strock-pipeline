@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-*"?>
+
+<SimulationModelIncludeFile>
+	<SimulaDirective path="primaryRoot/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+<SimulaDirective path="hypocotyl/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+<SimulaDirective path="basalWhorl1/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+<SimulaDirective path="basalWhorl2/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+<SimulaDirective path="basalWhorl3/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+<SimulaDirective path="hypocotylBornRoots/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+<SimulaDirective path="lateralPrimaryRoot/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+<SimulaDirective path="lateralPrimaryRootFastGrowing/secondaryGrowthRate">
+<SimulaConstant name="multiplier">
+			0.5
+		</SimulaConstant>
+	</SimulaDirective>
+
+</SimulationModelIncludeFile>
+

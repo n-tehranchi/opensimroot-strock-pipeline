@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Simulation file for SimRoot version 5. 
+
+	Author: Jouke Postma
+	Note: 
+	This file is an include file and contains the plantTemplate. You can control here 
+	what parameters are simulated for the plant. It has sections for the whole plant, 
+	the shoot, the hypocotyl and the roots and the datapoints (which are the nodes 
+	the root is made up from). 
+	This file contains the settings for the respiration calculations for simroot. 
+
+	
+	PLEASE KEEP THIS HEADER UP TO DATE! LIST BELOW WHO YOU ARE, WHEN AND WHAT CHANGES YOU MADE AND WHY. LIST YOUR SOURCE AS MUCH AS POSSIBLE!
+
+	change log:
+-->
+
+<SimulationModelIncludeFile>
+
+<!--PlantTemplate-->
+	<SimulaDirective path="/plantTemplate">
+		<SimulaDerivative name="plantCarbonBalance" unit="g" function="plantCarbonBalance" />
+	</SimulaDirective>	
+
+</SimulationModelIncludeFile>
+
