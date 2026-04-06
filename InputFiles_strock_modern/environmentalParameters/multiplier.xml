@@ -1,0 +1,13 @@
+
+<!--include file to multiply p distribution with -->
+<SimulationModelIncludeFile>
+ <!-- <SimulaDirective path="/environment/soil/phosphorus/concentration">
+    <SimulaConstant name="multiplier"> 5. </SimulaConstant>
+  </SimulaDirective>
+	<SimulaDirective path="/environment/soil/nitrate/concentration">
+    <SimulaConstant name="multiplier"> 1. </SimulaConstant>
+  </SimulaDirective>
+	<SimulaDirective path="/environment/soil/organic/carbonContent">
+    <SimulaConstant name="multiplier"> 1. </SimulaConstant>
+  </SimulaDirective>-->
+</SimulationModelIncludeFile>

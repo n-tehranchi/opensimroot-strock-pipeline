@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--Simroot input file, pot size study with Hendrik Poorter
+	-->
+<SimulationModelIncludeFile>
+	<!--environmental parameters start here. -->
+	<SimulaBase name="environment">
+		<SimulaBase name="dimensions">
+			<SimulaConstant name="minCorner" type="Coordinate">
+				<!-- -13.33 -30 -30-->
+				-4 -10 -4
+			</SimulaConstant>
+			<SimulaConstant name="maxCorner" type="Coordinate">
+				<!-- 13.33 0 30-->
+				4 0 4
+			</SimulaConstant>
+			<SimulaConstant name="roundPot" type="bool">
+			   1
+			</SimulaConstant>
+			</SimulaBase>
+		<SimulaBase name="soil">
+			<SimulaTable name_colum1="depth" unit_colum1="cm" name_colum2="bulkDensity" unit_colum2="g/cm3">
+				-100 1.24 100 1.24 
+			</SimulaTable>
+		</SimulaBase>
+	</SimulaBase>
+	<SimulaIncludeFile fileName="environmentalParameters/pots/water.xml" />
+	<SimulaIncludeFile fileName="environmentalParameters/pots/atmosphere.xml" />
+	<SimulaIncludeFile fileName="environmentalParameters/pots/nitrate.xml" />
+	<SimulaIncludeFile fileName="environmentalParameters/pots/phosphorus.xml" />
+	<SimulaIncludeFile fileName="environmentalParameters/pots/potassium.xml" />
+	<SimulaIncludeFile fileName="environmentalParameters/pots/organic.xml" />
+	<SimulaIncludeFile fileName="environmentalParameters/multiplier.xml" />
+</SimulationModelIncludeFile>

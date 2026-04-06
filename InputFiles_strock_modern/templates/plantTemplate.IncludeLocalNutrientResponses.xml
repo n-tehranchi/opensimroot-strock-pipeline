@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Simulation file for SimRoot version 12. 
+
+	Author: Jouke Postma
+	Note: 
+	Inclusion of this file will enable the simulation of root growth responses to local nutrient concentrations 
+	
+-->
+
+<SimulationModelIncludeFile>
+<!--PlantTemplate-->
+	<SimulaDirective path="/plantTemplate">
+	</SimulaDirective>	
+
+<!--ShootTemplate-->
+	<SimulaDirective path="/shootTemplate">
+	</SimulaDirective>
+
+<!--HypocotylTemplate-->
+	<SimulaDirective path="/hypocotylTemplate">
+		<SimulaDirective path="growthpoint">
+		    <SimulaDerivative name="branchingFrequencyMultiplier" function="localNutrientResponse" />
+		</SimulaDirective>
+	</SimulaDirective>
+
+<!--Sibling root template-->
+	<SimulaDirective path="/siblingRootTemplate">
+		<SimulaDirective path="growthpoint">
+			<SimulaDirective path="rootPotentialLongitudinalGrowth">
+			    <SimulaDerivative name="multiplier" function="localNutrientResponse" />
+			</SimulaDirective>
+			<SimulaLink name="gravitropism" linksName="gravitropism.v2">
+			    <SimulaDerivative name="multiplier" function="localNutrientResponse" />
+			</SimulaLink>
+		    <SimulaDerivative name="branchingFrequencyMultiplier" function="localNutrientResponse" />
+			
+			<!-- SimulaLink name="soilImpedence" linksName="soilImpedence.v2">
+			    <SimulaDerivative name="multiplier" function="localNutrientResponse">
+			       <SimulaConstant name="nameFactor" type="string">
+			          impedanceField
+			       </SimulaConstant>
+			    </SimulaDerivative>
+			</SimulaLink>
+			<SimulaBase name="bulkDensity">
+			    <SimulaLink name="impedanceField" linksName="/environment/soil/bulkDensity" />
+			</SimulaBase-->    
+		</SimulaDirective>
+	</SimulaDirective>
+	
+<!--DataPointTemplate-->
+	<SimulaDirective path="/dataPointTemplate">
+	<!-- these are only here for visualization of the field -->
+			<!-- SimulaBase name="bulkDensity">
+			    <SimulaLink name="impedanceField" linksName="/environment/soil/bulkDensity" />
+			</SimulaBase-->    
+	</SimulaDirective>
+</SimulationModelIncludeFile>
+
